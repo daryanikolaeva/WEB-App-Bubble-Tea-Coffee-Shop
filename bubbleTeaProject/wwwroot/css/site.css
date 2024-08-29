@@ -1,0 +1,19 @@
+body {
+    background: #ff399b;
+}
+
+/*רנטפעû*/
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/fonts/main-font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MainFont';
+    src: url('/fonts/ua-BRAND-bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,0 +1,66 @@
+﻿@page 
+@model bubbleTeaProject.Pages.ProductPageModel
+@{
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/productPage.css" />
+</head>
+<body>
+<div class="rectangle"></div> 
+
+<div style="display: flex; padding-top: 60px;padding-left:40px ">
+    <div class="centeri" style="" >
+        <div class="card">
+            <img src="@Url.Content(Model.images[Model.Parameter-25])" style="height: 460px; padding-top: 50px;">
+        </div>
+    </div>
+    
+    <div style="display: flex; flex-direction: column">
+        <div class="main-txt">@Model.product.ProdName</div>
+
+            <div class="rest-txt">@Model.description[Model.Parameter-25]</div>
+
+        <div style=" display: flex;">
+
+            <div style="display: flex; flex-direction: column; padding-top: 60px; padding-left: 60px;">
+               
+                <form method="post">
+                <input type="hidden" name="parameter" value="@Model.Parameter" />
+                <input type="hidden" name="amount" value="@Model.Amount" />
+                        <button class="button" type="submit" name="action" id = "action" value="addToCart" >Добавить в корзину</button>
+                </form>
+
+                <div style="display: flex; padding-top: 15px; padding-left: 47px;">
+                    <form method="post">
+                        <input type="hidden" name="parameter" value="@Model.Parameter" />
+                        <input type="hidden" name="amount" value="@Model.Amount" />
+                            <button class="mini-button" type="submit" name="action" value="decrement">-</button>
+                    </form>
+
+                    <div style="font-size: 20px; font-family: 'MainFont'; padding-left: 10px; padding-top: 10px; padding-right: 10px; color: black; font-weight: bold; z-index: 3;">@Model.Amount шт.</div>
+                    
+                    <form method="post">
+                    <input type="hidden" name="parameter" value="@Model.Parameter" />
+                    <input type="hidden" name="amount" value="@Model.Amount" />
+                            <button class="mini-button" type="submit" name="action" value="increment">+</button>
+                        </form>
+                        </div>
+
+            </div>
+
+            <div class="price-txt" style="padding-top: 50px; padding-left: 50px;">@Model.product.ProdPrice руб.</div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

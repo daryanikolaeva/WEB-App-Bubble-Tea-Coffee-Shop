@@ -1,0 +1,93 @@
+﻿@page
+@using Program = global::Program
+
+@model bubbleTeaProject.Pages.CatalogModel
+@{
+}
+
+@{
+    Model.LoadingData();
+}
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/catalog.css" />
+</head>
+
+<body>
+    <div class="main-txt" align="center">Меню</div>
+
+<div class="rectangle">
+</div>
+
+    <div style="display: flex; padding-left: 230px; padding-top: 250px;">
+    <div class="centeri" >
+        <a asp-page="/ProductPage" asp-route-parameter="25" style="color: inherit;
+                                                                  text-decoration: none;"> <div class="card">
+            <img src="~/images/products/strawberry.png" style="height: 290px; padding-top:24px ">
+
+                </div>
+
+                <div class="txt">@Model.names[0]</div>
+            </a>
+    </div>
+        <div class="centeri" style="padding-left: 200px">
+            <a asp-page="/ProductPage" asp-route-parameter="26" style="color: inherit;text-decoration: none;">
+            <div class="card">
+                <img src="~/images/products/cofee.png" style="height: 340px; padding-bottom: 25px">
+
+            </div>
+            <div class="txt">@Model.names[1]</div>
+            </a>
+        </div>
+        <div class="centeri">
+            <a asp-page="/ProductPage" asp-route-parameter="27"  style="color: inherit;
+                                                                      text-decoration: none;">
+            <div class="card">
+                <img src="~/images/products/green.png" style="height: 250px; padding-top: 45px">
+            </div>
+                <div class="txt">@Model.names[2]</div>
+            </a>
+        </div>
+</div>
+
+    <div style="display: flex; padding-left: 230px; padding-top: 100px;">
+        <div class="centeri">
+            <a asp-page="/ProductPage" asp-route-parameter="28"  style="color: inherit;
+                                                                      text-decoration: none;">
+            <div class="card">
+                <img src="~/images/products/flowers.png" style="height: 270px; padding-top: 30px">
+
+            </div>
+            <div class="txt">@Model.names[3]</div>
+            </a>
+        </div>
+        <div class="centeri" style="padding-left: 200px">
+            <a asp-page="/ProductPage" asp-route-parameter="29"  style="color: inherit;
+                                                                      text-decoration: none;">
+            <div class="card">
+                <img src="~/images/products/unicorn.png" style="height: 300px; padding-top: 20px; padding-left: 20px">
+
+            </div>
+            <div class="txt">@Model.names[4]</div>
+            </a>
+        </div>
+        <div class="centeri">
+            <a asp-page="/ProductPage" asp-route-parameter="30"  asp-route-amount="0" style="color: inherit;
+                                                                      text-decoration: none;">
+            <div class="card">
+                <img src="~/images/products/bumbl.png" style="height: 350px; padding-bottom: 20px">
+
+            </div>
+            <div class="txt">@Model.names[5]</div>
+            </a>
+        </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+﻿@page
+@using Program = global::Program
+@model bubbleTeaProject.Pages.CartModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/cart.css"/>
+</head>
+
+<body>
+<div style="display: flex; flex-direction: column">
+    <div class="main-txt">Корзина</div>
+    <div style="display: flex; padding-top: 15px;">
+        <div style="display: flex; flex-direction: column; padding-left: 50px; border: 2px solid #FF7ABB; padding-right: 50px; border-radius: 30px; width: 600px; height: 500px; background-color: #FF7ABB ">
+            <div class="zagolovok" style="text-align: center;">Введите данные</div>
+            
+            <form method="post" id="myForm" >
+                <p>
+                    <label class="rest-text" style="margin-top: 20px;">Имя</label>
+                    <input type="text" name="username" class="input-txt" style="margin-left: 30px; font-family: 'MainFont'" />
+                </p>
+                <p>
+                    <label class="rest-text" style="margin-top: 20px;">Телефон</label>
+                    <input type="tel" name="tel" class="input-txt" style="font-family: 'MainFont'; margin-left: 30px;" />
+                </p>
+
+                <p>
+                    <label for="dropdown" style="margin-top: 20px;" class="rest-text">Выберите способ оплаты</label>
+                    <select id="dropdown" class="input-txt" style="width: 200px; font-family: 'MainFont'; margin-top: 10px;" name="dropdown">
+                        <option value="card" style="font-family: 'MainFont'">Карта</option>
+                        <option value="money" style="font-family: 'MainFont'" >Наличные</option>
+                    </select>
+                </p>
+
+                <button type="submit" class="button" id="myButton" style="margin-top: 20px; margin-left: 70px;" >Оформить заказ</button>
+            </form>
+
+            <div id="notification" class="notification">
+                <p>Заказ оформлен!</p>
+            </div>
+
+        </div>
+
+            <div style="display: flex; flex-direction: column; margin-left: 30px; border: 2px solid #FF7ABB;border-radius: 30px; width: 800px;background-color: #FF7ABB" >
+                <div class="zagolovok" style="text-align: center">Заказ</div>
+
+                @for (int i = 0; i < Model.Products.Count; i++)
+                        {
+                            <div style = "display: flex; flex-direction: column; padding-bottom: 5px; "> 
+                            <div style="display: flex; border: 3px solid #ffffff; border-radius: 50px; margin-left: 20px; margin-right: 20px; height: 90px; background-color:#FF399B">
+
+                            <img src="@Url.Content(Model.images[Model.Check[i].ProdId-25])" style="">
+                            <div class="prod-descr">@Model.Products[i].ProdName</div>
+                            <div class="prod-descr" style="font-size: 20px; padding-left: 10px; padding-top: 30px;">
+                                 / @Model.Check[i].Amount шт.
+                            </div>
+                            <div style="margin-left: auto; padding-right: 20px;" class="price">
+                                @Model.TotalCountEachProduct[i] руб.
+                            </div>
+
+
+                        </div>
+                    </div>
+                     }
+
+                @if (@Model.LastOrder.OrderPrice == null)
+                {
+                    <div class="zagolovok" style="padding-left: 40px; margin-top: auto; padding-bottom: 30px;">Итого:
+                        0 руб.
+                    </div>
+                }
+                else
+                {
+                    <div class="zagolovok" style="padding-left: 40px; margin-top: auto; padding-bottom: 30px;">Итого:
+                        @Model.LastOrder.OrderPrice руб.
+                    </div>
+                }
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

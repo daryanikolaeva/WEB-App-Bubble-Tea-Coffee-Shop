@@ -1,0 +1,88 @@
+﻿
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 600px;
+    }
+
+    100% {
+        background-position: 600px;
+    }
+}
+
+.main-txt {
+    font-family: 'CustomFont';
+    font-size: 140px;
+    color: #FF399B;
+    text-shadow: 1px 2px 2px #570228;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 70px #fff;
+    z-index: 2;
+    position: relative;
+}
+
+
+
+img {
+    border-radius: 0px;
+
+    transition: 0.5s;
+    object-fit: contain;
+}
+
+
+img, #parent {
+    cursor: pointer;
+}
+
+.card:hover > img {
+    opacity: 1;
+    transform: scale(1.4);
+}
+
+
+.card {
+    transition: transform .7s;
+    box-shadow: 0 4px 8px 4px #570228;
+    align-content: center;
+    border-radius: 300px;
+    background: #fdd3e4;
+    width: 310px;
+    height: 310px;
+}
+
+.card:hover {
+    transform: scale(1.08)
+}
+
+.centeri {
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.txt {
+    font-family: 'CustomFont';
+    font-size: 50px;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    text-align: center;
+    color: #fff;
+    line-height: 1.0;
+}
+
+.rectangle {
+    width: 94%; /* Регулируйте ширину прямоугольника */
+    height: 1200px; /* Регулируйте высоту прямоугольника */
+    background-color: white; /* Устанавливаем прозрачный фон */
+    border: 3px solid white; /* Белая граница */
+    position: absolute; /* Используем абсолютное позиционирование */
+    top: 780px; /* Размещаем по вертикали по центру страницы */
+    left: 50%; /* Размещаем по горизонтали по центру страницы */
+    transform: translate(-50%, -50%); /* Центрируем прямоугольник */
+    z-index: 1;
+    opacity: 0.3;
+    border-radius: 50px;
+}

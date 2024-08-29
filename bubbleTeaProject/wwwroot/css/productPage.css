@@ -1,0 +1,225 @@
+﻿body {
+
+}
+
+.rectangle {
+    width: 94%; /* Регулируйте ширину прямоугольника */
+    height: 620px; /* Регулируйте высоту прямоугольника */
+    background-color: white; /* Устанавливаем прозрачный фон */
+    border: 3px solid white; /* Белая граница */
+    position: absolute; /* Используем абсолютное позиционирование */
+    top: 390px;
+    bottom: 10px;/* Размещаем по вертикали по центру страницы */
+    left: 50%; /* Размещаем по горизонтали по центру страницы */
+    transform: translate(-50%, -50%); /* Центрируем прямоугольник */
+  
+    opacity: 0.3;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 600px;
+    }
+
+    100% {
+        background-position: 600px;
+    }
+}
+
+.main-txt {
+    font-family: 'CustomFont';
+    padding-top: 20px;
+    font-size: 120px;
+    padding-left: 60px;
+    text-align: center;
+    align-content: center;
+    line-height: 0.9;
+    color: #FF399B;
+    text-shadow: 1px 2px 2px #570228;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 70px #fff;
+    z-index: 2;
+    position: relative;
+}
+
+.rest-txt {
+    font-family: 'MainFont';
+    color: #fdd3e4;
+    font-size: 30px;
+    padding-top: 50px;
+    padding-left: 50px;
+    text-align: center;
+    line-height: 0.8;
+    z-index: 2;
+}
+
+img {
+    border-radius: 0px;
+    object-fit: contain;
+}
+
+
+
+.card {
+    box-shadow: 0 4px 8px 4px #570228;
+    align-content: center;
+    border-radius: 300px;
+    background: #fdd3e4;
+    width: 500px;
+    height: 500px;
+}
+
+
+.centeri {
+    z-index: 3;
+}
+
+.txt {
+    font-family: 'CustomFont';
+    font-size: 50px;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    text-align: center;
+    color: #fff;
+    line-height: 1.0;
+    z-index: 2;
+}
+
+
+.rounded-button {
+    border-radius: 20px; /* Устанавливаем радиус закругления */
+    padding: 10px 20px;/* Добавляем внутренние отступы */
+    height: 50px;
+}
+
+
+
+.price-txt {
+    font-size: 80px;
+    font-family: 'CustomFont';
+    color: #ffffff;
+    padding-left: 30px;
+    z-index: 2;
+}
+
+
+/*кнопка*/
+.button {
+    z-index: 2;
+    position: relative;
+    background-color: #ff399b;
+    border-radius: 4em;
+    letter-spacing: 2px;
+    height: 60px;
+    font-size: 30px;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    width: 280px;
+    cursor: pointer;
+    user-select: none;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    font-family: 'CustomFont';
+}
+
+.mini-button {
+    z-index: 2;
+    position: relative;
+    background-color: #ff399b;
+    border-radius: 4em;
+    border: 3px solid #ffffff;
+    font-size: 30px;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    align-content: center;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    font-family: 'CustomFont';
+}
+
+.button:hover {
+    transition-duration: 0.1s;
+    background-color: #ffffff;
+    color: #ff399b;
+    border: 3px solid #ff399b;
+}
+
+.button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+}
+
+.button:active:after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.button:active {
+    top: 1px;
+}
+
+.mini-button:hover {
+    transition-duration: 0.1s;
+    background-color: #ffffff;
+    color: #ff399b;
+    border: 3px solid #ff399b;
+}
+
+.mini-button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+}
+
+.mini-button:active:after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.mini-button:active {
+    top: 1px;
+}
+
+
+
+
